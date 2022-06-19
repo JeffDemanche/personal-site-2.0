@@ -1,1 +1,3 @@
-# personal-site-2.0
+# Jeff's Personal Site
+
+Hi this is my personal site project :)
