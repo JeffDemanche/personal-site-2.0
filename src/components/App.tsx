@@ -1,7 +1,13 @@
 import React from "react";
 import styles from "./App.less";
+import { BasicInfo } from "./BasicInfo/BasicInfo";
+import { GenerativeBackground } from "./GenerativeBackground/GenerativeBackground";
 
 export const App: React.FC = () => {
-  console.log("ere");
-  return <div className={styles["app"]}></div>;
+  return (
+    <div className={styles["app"]}>
+      <GenerativeBackground />
+      <BasicInfo />
+    </div>
+  );
 };

@@ -47,10 +47,12 @@ module.exports = {
     }),
   ],
   devServer: {
-    host: "localhost",
-    port: 3000,
+    static: {
+      directory: path.join(__dirname, "dist"),
+    },
     historyApiFallback: true,
-    open: true,
+    compress: true,
+    port: 3456,
   },
   mode: "development",
 };
