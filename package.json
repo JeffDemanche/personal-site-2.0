@@ -4,7 +4,7 @@
   "description": "My personal site",
   "main": "index.js",
   "scripts": {
-    "ds": "npx webpack serve",
+    "ds": "npx webpack serve --hot",
     "w": "npx webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -13,17 +13,24 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.css$/,
-        use: ["style-loader", "css-loader"],
-      },
-      {
-        test: /\.less$/i,
+        test: /\.less$/,
         use: [
-          // compiles Less to CSS
           "style-loader",
-          "css-loader",
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 1,
+              modules: {
+                localIdentName: "[name]__[local]___[hash:base64:5]",
+              },
+            },
+          },
           "less-loader",
         ],
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
@@ -44,7 +51,6 @@ module.exports = {
     port: 3000,
     historyApiFallback: true,
     open: true,
-    watch: true,
   },
   mode: "development",
 };
